@@ -48,5 +48,6 @@ csrf.init_app(app)
 
 @app.route("/static")
 def static_content():
+    from flask import make_response #not used but its there in the original anyway
     # https://github.com/dgtlmoon/changedetection.io/blob/3d1e1025d2eea3085c6247d6b88905ffe7b84a40/changedetectionio/flask_app.py#L1239C1-L1239C81
     return send_from_directory("static", path="image.png")
