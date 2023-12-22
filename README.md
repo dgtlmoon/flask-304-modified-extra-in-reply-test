@@ -1,6 +1,5 @@
 Trying to replicate https://github.com/dgtlmoon/changedetection.io/issues/2053 which is also living at https://github.com/eventlet/eventlet/issues/862
 
-Maybe it's due to some other included module/package?
 
 ```bash
 $ python3 -m venv  ./venv
