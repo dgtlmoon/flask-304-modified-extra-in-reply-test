@@ -29,6 +29,12 @@ and now you should be able to see (because of the RFC violation)
 * Connection #0 to host localhost left intact
 ```
 
+This bad behaviour is enabled by using eventlet wsgi as a wrapper
+
+```
+    s_type = socket.AF_INET
+    eventlet.wsgi.server(eventlet.listen(("127.0.0.1", int(5000)), s_type), app)
+````
 
 **BUT**
 
