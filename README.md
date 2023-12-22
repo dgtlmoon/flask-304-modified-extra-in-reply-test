@@ -17,3 +17,10 @@ curl -vvv 'http://localhost:5000/static' \
     -H 'If-None-Match: "1703239999.0048695-13861-933627416"' \
     -H 'TE: trailers'
 ```
+
+and now you should be able (or not) to see
+
+```
+* Excess found: excess = 5 url = /static (zero-length body)
+* Connection #0 to host localhost left intact
+```
