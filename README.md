@@ -22,7 +22,7 @@ curl -vvv 'http://localhost:5000/static' \
     -H 'TE: trailers'
 ```
 
-and now you should be able (or not) to see
+and now you should be able to see (because of the RFC violation)
 
 ```
 * Excess found: excess = 5 url = /static (zero-length body)
@@ -32,7 +32,7 @@ and now you should be able (or not) to see
 
 **BUT**
 
-This does **NOT** show 'Excess found'
+This does **NOT** show 'Excess found' (because we dont use eventlet in this way)
 
 ```bash
 $ pip3 install -r requirements.txt
