@@ -2,7 +2,11 @@ Trying to replicate https://github.com/dgtlmoon/changedetection.io/issues/2053
 
 Maybe it's due to some other included module/package?
 
-`flask --app app run`
+```bash
+pip3 install -r requirements.txt
+flask --app app run
+```
+
 
 then (you may need to edit the etag and mod-if dates)
 
@@ -16,4 +20,11 @@ curl -vvv 'http://localhost:5000/static' \
     -H 'If-Modified-Since: Fri, 22 Dec 2023 10:14:33 GMT' \
     -H 'If-None-Match: "1703239999.0048695-13861-933627416"' \
     -H 'TE: trailers'
+```
+
+and now you should be able (or not) to see
+
+```
+* Excess found: excess = 5 url = /static (zero-length body)
+* Connection #0 to host localhost left intact
 ```
