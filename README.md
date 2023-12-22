@@ -3,8 +3,8 @@ Trying to replicate https://github.com/dgtlmoon/changedetection.io/issues/2053
 Maybe it's due to some other included module/package?
 
 ```bash
-pip3 install -r requirements.txt
-flask --app app run
+$ pip3 install -r requirements.txt
+$ ./app.py
 ```
 
 
