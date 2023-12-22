@@ -30,11 +30,13 @@ and now you should be able (or not) to see
 ```
 
 
-** BUT **
+**BUT**
 
-This does NOT show 'Excess found'
+This does **NOT** show 'Excess found'
 
 ```bash
 $ pip3 install -r requirements.txt
 $ flask --app app run
 ```
+
+So why when adding the eventlet wrapper we see the problem
