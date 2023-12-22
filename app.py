@@ -34,7 +34,11 @@ from flask import (
 
 from flask_paginate import Pagination, get_page_parameter
 
-app = Flask(__name__, static_folder="static")
+app = Flask(__name__,
+            static_url_path="",
+            static_folder="static",
+            template_folder="templates")
+
 FlaskCompress(app)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['TEMPLATES_AUTO_RELOAD'] = True
